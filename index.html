@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzeria</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="logo-name">
+        <h1>Pizzeria menu</h1>
+      </div>
+      <form class="input-form">
+        <label for="name"
+          >Pizza Name:
+          <input
+            class="name"
+            type="text"
+            name="name"
+            placeholder="Enter Pizza name"
+            max="30"
+            required
+          />
+        </label>
+        <label for="price"
+          >Price:
+          <input
+            class="price"
+            type="text"
+            name="price"
+            placeholder="Enter price 0.00"
+            pattern="^\d+\.\d{2}$"
+            min="0"
+            step=".01"
+            required
+          />
+        </label>
+        <label for="heat"
+          >Heat:
+          <input
+            class="heat"
+            type="number"
+            name="heat"
+            placeholder="Enter heat"
+            min="1"
+            max="3"
+          />
+        </label>
+        <div class="pizza-toppings">
+          <label for="toppings"
+            >Toppings:
+            <input
+              class="toppings"
+              type="text"
+              name="toppings"
+              placeholder="Enter Pizza topping"
+              required
+            />
+            <input
+              class="toppings"
+              type="text"
+              name="toppings"
+              placeholder="Enter Pizza topping"
+              required
+            />
+          </label>
+          <input class="add-topping" type="button" value="Add topping" />
+        </div>
+        <label for="pizza">
+          Pizza photo:
+          <select id="pizza-select"></select>
+          <div class="pizza-img"></div>
+        </label>
+        <div>
+          <input class="submit-button" type="submit" value="Add pizza" />
+        </div>
+      </form>
+    </header>
+    <section>
+      <h2>Menu</h2>
+      <div class="container">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="5">Pizza</th>
+            </tr>
+            <tr>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Toppings</th>
+              <th>Heat owen</th>
+              <th>Price</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody class="pizza-list">
+            <select name="sort" id="sort">
+              <option default value="name">Name</option>
+              <option value="price">Price</option>
+              <option value="heat">Heat</option>
+            </select>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    Photo by
+    <a href="https://freeimages.com/photographer/Ayla87-49541"
+      >Michael &amp; Christa Richert</a
+    >
+    from <a href="https://freeimages.com">FreeImages</a> Photo by
+    <a href="https://freeimages.com/photographer/the_mutt-64666">Matt Palmer</a>
+    from <a href="https://freeimages.com">FreeImages</a> Image by
+    <a
+      href="https://pixabay.com/users/art_korporation-1180042/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=857884"
+      >Christophe Collet</a
+    >
+    from
+    <a
+      href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=857884"
+      >Pixabay</a
+    >
+    Image by
+    <a
+      href="https://pixabay.com/users/engin_akyurt-3656355/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2973200"
+      >Engin Akyurt</a
+    >
+    from
+    <a
+      href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2973200"
+      >Pixabay</a
+    >
+    Image by
+    <a
+      href="https://pixabay.com/users/petrovhey-2830663/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3000274"
+      >petrovhey</a
+    >
+    from
+    <a
+      href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3000274"
+      >Pixabay</a
+    >
+    Image by
+    <a
+      href="https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=576085"
+      >OpenClipart-Vectors</a
+    >
+    from
+    <a
+      href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=576085"
+      >Pixabay</a
+    >
+    Image by
+    <a
+      href="https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1298824"
+      >OpenClipart-Vectors</a
+    >
+    from
+    <a
+      href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1298824"
+      >Pixabay</a
+    >
+    Photo by <a>ROMAN ODINTSOV from Pexels</a> Photo by
+    <a>kei photo from Pexels</a>
+    <script type="text/javascript" src="scripts/pizzaToppings.js"></script>
+    <script type="text/javascript" src="scripts/pizzaImage.js"></script>
+    <script type="text/javascript" src="scripts/addPizza.js"></script>
+    <script type="text/javascript" src="scripts/pizzaMenu.js"></script>
+  </body>
+</html>
